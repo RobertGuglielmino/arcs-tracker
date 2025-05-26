@@ -3,6 +3,7 @@ import './App.css'
 import { cardImages } from './imageImports';
 import logo from "./assets/logo.png";
 import type { Card } from './Card';
+import { Analytics } from "@vercel/analytics/next"
 // import Player from './Player';
 // import event from "./assets/event_1.webp";
 // import cardBack from "./assets/action-back.jpg";
@@ -180,6 +181,8 @@ function App() {
         </div> */}
       </div>
     </div>
+
+    <Analytics/>
   </div>);
 }
 
