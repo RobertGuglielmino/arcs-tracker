@@ -3,9 +3,9 @@ import './App.css'
 import { cardImages } from './imageImports';
 import logo from "./assets/logo.png";
 import type { Card } from './Card';
-import Player from './Player';
-import event from "./assets/event_1.webp";
-import cardBack from "./assets/action-back.jpg";
+// import Player from './Player';
+// import event from "./assets/event_1.webp";
+// import cardBack from "./assets/action-back.jpg";
 
 
 const generateDeck = (): Card[] => {
@@ -28,28 +28,28 @@ const generateDeck = (): Card[] => {
   return deck;
 };
 
-const eventCard: Card = {
-  id: 'event',
-  imageSrc: event,
-  suit: 'administration',
-  value: 0,
-}
+// const eventCard: Card = {
+//   id: 'event',
+//   imageSrc: event,
+//   suit: 'administration',
+//   value: 0,
+// }
 
-const cardBackCard: Card = {
-  id: 'cardBack',
-  imageSrc: cardBack,
-  suit: 'administration',
-  value: 0,
-}
+// const cardBackCard: Card = {
+//   id: 'cardBack',
+//   imageSrc: cardBack,
+//   suit: 'administration',
+//   value: 0,
+// }
 
 function App() {
   const [playerCount, setPlayerCount] = useState<2 | 3 | 4>(4);
   const [playedCards, setPlayedCards] = useState<Set<Card>>(new Set());
   const [cardHistory, setCardHistory] = useState<Card[]>([]);
 
-  function getPlayedCardsByIndex(index: number): Card[] {
-    return cardHistory.filter((_, i) => i % playerCount === index - 1);
-  }
+  // function getPlayedCardsByIndex(index: number): Card[] {
+  //   return cardHistory.filter((_, i) => i % playerCount === index - 1);
+  // }
 
   const deck = useMemo(() => generateDeck(), []);
 
@@ -74,17 +74,17 @@ function App() {
     setCardHistory([]);
   };
 
-  const handleEvent = () => {
-    setCardHistory(prev => {
-      return [...prev, eventCard];
-    });
-  };
+  // const handleEvent = () => {
+  //   setCardHistory(prev => {
+  //     return [...prev, eventCard];
+  //   });
+  // };
 
-  const handleCardBack = () => {
-    setCardHistory(prev => {
-      return [...prev, cardBackCard];
-    });
-  };
+  // const handleCardBack = () => {
+  //   setCardHistory(prev => {
+  //     return [...prev, cardBackCard];
+  //   });
+  // };
 
   const handleUndo = () => {
     const cards = cardHistory.slice(0, -1);
