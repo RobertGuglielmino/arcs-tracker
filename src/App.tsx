@@ -3,7 +3,6 @@ import './App.css'
 import { cardImages } from './imageImports';
 import logo from "./assets/logo.png";
 import type { Card } from './Card';
-import { Analytics } from "@vercel/analytics/next"
 // import Player from './Player';
 // import event from "./assets/event_1.webp";
 // import cardBack from "./assets/action-back.jpg";
@@ -99,7 +98,6 @@ function App() {
   };
 
   return (<div className="bg-[url(./assets/background.webp)] bg-contain h-screen text-white">
-    <Analytics/>
     <div className='flex flex-col xl:flex-row'>
       <div className="xl:min-w-1/3 flex flex-row xl:flex-col items-center justify-evenly gap-4">
         {/* Logo and title */}
