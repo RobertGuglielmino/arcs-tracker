@@ -65,7 +65,7 @@ function App() {
     setCardHistory(cards);
   };
 
-  return (<div className="bg-[url(./assets/background.jpg)] bg-contain h-screen">
+  return (<div className="bg-[url(./assets/background.webp)] bg-contain h-screen">
     <div className='flex flex-row justify-evenly'>
       <div className="flex flex-col items-center justify-around gap-4">
         <div className="flex flex-col items-center">
