@@ -93,7 +93,6 @@ function App() {
   };
 
   return (<div className="bg-[url(./assets/background.webp)] bg-contain h-screen text-white">
-    {window.innerWidth}
     <div className='flex flex-col xl:flex-row'>
       <div className="xl:min-w-1/3 flex flex-row xl:flex-col items-center justify-evenly gap-4">
         {/* Logo and title */}
