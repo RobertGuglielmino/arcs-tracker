@@ -54,19 +54,24 @@ function App() {
   const deck = useMemo(() => generateDeck(), []);
 
   const handleCardClick = (card: Card) => {
-    setPlayedCards(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(card)) {
-        newSet.delete(card);
-      } else {
-        newSet.add(card);
-      }
-      return newSet;
-    });
+    if (playedCards.has(card)) {
+      handleUndo()
+    } else {
 
-    setCardHistory(prev => {
-      return [...prev, card];
-    });
+      setPlayedCards(prev => {
+        const newSet = new Set(prev);
+        if (newSet.has(card)) {
+          newSet.delete(card);
+        } else {
+          newSet.add(card);
+        }
+        return newSet;
+      });
+
+      setCardHistory(prev => {
+        return [...prev, card];
+      });
+    }
   };
 
   const handleNewRound = () => {
