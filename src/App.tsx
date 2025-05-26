@@ -56,6 +56,7 @@ function App() {
 
   const handleNewRound = () => {
     setPlayedCards(new Set());
+    setCardHistory([]);
   };
 
   const handleUndo = () => {
