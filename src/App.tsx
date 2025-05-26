@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import './App.css'
 import { cardImages } from './imageImports';
-import logo from "./assets/logo.png";
+import logo from "./assets/logo.webp";
 
 interface Card {
   id: string;
